@@ -19,17 +19,21 @@ html {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin: auto;
-    position: sticky;
-    top: 0;
+   
+   height: 100px;
   
     
 }
 
+
 .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
   }
 
 .head{
@@ -58,18 +62,17 @@ html {
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
-    
     padding-right: 80px;
 }
 .header_item{
-    padding-left:20px;
+    padding-left:30px;
     position: relative;
   
 }
 .header_list a{
     text-decoration: none;
     color: #0756F2;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     transition:0.5s;
     transition-timing-function: ease;
@@ -77,7 +80,7 @@ html {
 .header_list a:hover{
   transition:0.5s;
   transition-timing-function: ease;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .head-name{
@@ -89,8 +92,8 @@ html {
 /*Table*/
 .cont-book{
     padding-top: 60px;
-    margin-top: 150px;
-    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 150px;
 }
 
 section{
@@ -121,6 +124,7 @@ td a{
 }
 thead{
     background-color: #0756F2;
+    color: white;
 }
 tr:nth-child(even) {background-color: #f2f2f2;}
 tbody,tr{
@@ -138,12 +142,16 @@ tbody,tr{
 
 
 /*Signup Form*/
+.form-design{
+  margin-bottom: 150px;
+}
 .signup-form {
     font-weight: 700;
     width:650px;
     margin:30px auto;
     background:linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
     border-radius: 10px;
+    box-shadow: 28px 23px 15px -3px rgba(0,0,0,0.1);
   }
   .form-header  {
     background-color: #E6E4DD;
