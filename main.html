@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+        <nav class="header_nav" id="navbar">
+            <div class="head">
+                <a class="heading" href="#">
+                   <img width="45" height="45" src="https://img.icons8.com/nolan/64/books-1.png" alt="books-1"/>
+                   <h1 class="head-name">Library</h1>
+                </a>
+            </div>
+          <ul class="header_list">
+            <li class="header_item"><a href="#Books" class="header__link">Books</a></li>
+            <li class="header_item"><a href="#form" class="header__link">Register</a></li>
+            <li class="header_item"><a href="tel:123-456-7890" class="header__link">Contact</a></li>
+          </ul>
+        </nav>
+    
+
+
+    <!--books details-->
+    <div class="cont-book">
+     <Section class="Books" id="Books" >
+        <h1>Books</h1>
+        <table class="table-1">
+            <thead>
+              <tr>
+                <th>Book ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Availablity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><a href="#">Book 1</a>
+                    <table id="table-inside">
+                        <tr>
+                            <td>Publication Date: 2000</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Page Count: 350
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ISBN: 123-45678904
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Author name 1</td>
+                <td>Genre 1</td>
+                <td>Available</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><a href="#">Book 2</a>
+                    <table id="table-inside">
+                        <tr>
+                            <td>Publication Date: 2010</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Page Count: 350
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ISBN: 123-45678904
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Author name 2</td>
+                <td>Genre 2</td>
+                <td>Available</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><a href="#">Book 3</a> 
+                    <table id="table-inside">
+                        <tr>
+                            <td>Publication Date: 2000</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Page Count: 350
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ISBN: 123-45678904
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Author name 3</td>
+                <td>Genre 3</td>
+                <td>Available</td>
+              </tr>
+            </tbody>
+            </table>
+     </Section>
+    </div>
+       <!--Sign up page-->
+    <div class="form-design" id="form" style="width: 100%;">
+       <form class="signup-form" action="/register" method="post">
+            <!-- form header -->
+            <div class="form-header">
+                <h1>Register Yourself</h1>
+            </div>
+
+           <!-- form body -->
+            <div class="form-body">
+                <div class="horizontal-group">
+                    <div class="form-group left">
+                        <label for="firstname" class="label-title">First name *</label>
+                        <input type="text" id="firstname" class="form-input" placeholder="enter your first name" required="required" />
+                    </div>
+                    <div class="form-group right">
+                        <label for="lastname" class="label-title">Last name</label>
+                        <input type="text" id="lastname" class="form-input" placeholder="enter your last name" />
+                    </div>
+                </div>
+                      <!-- Email -->
+                <div class="form-group">
+                   <label for="email" class="label-title">Email*</label>
+                   <input type="email" id="email" class="form-input" placeholder="enter your email" required="required">
+                </div>
+  
+             <!-- Password and confirm password -->
+                <div class="horizontal-group">
+  
+                   <div class="form-group left">
+                     <label for="password" class="label-title">Password *</label>
+                     <input type="password" id="password" class="form-input" placeholder="enter your password" required="required">
+                   </div>
+  
+                   <div class="form-group right">
+                     <label for="confirm-password" class="label-title">Confirm Password *</label>
+                     <input type="password" class="form-input" id="confirm-password" placeholder="enter your password again" required="required">
+                   </div>
+  
+                </div>
+
+                <div class="horizontal-group">
+                    <div class="form-group left" >
+                        <label for="date-of-birth" class="label-title">Date Of Birth </label>
+                        <input type="date" id="date-of-birth" size="80">
+                      </div>
+                      
+                      <div class="form-group right">
+                        <label for="experience" class="label-title">Age</label>
+                        <input type="number" min="5" max="100"  value="18" class="form-input">
+                      </div>
+                </div>
+            </div>
+    
+            <!-- form footer -->
+            <div class="form-footer">
+                <span>* required</span>
+                <button type="submit" class="btn">Register</button>
+            </div>
+       </form>
+    </div>
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+        </script>
+</body>
+</html>
